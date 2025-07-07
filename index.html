@@ -483,26 +483,30 @@
             margin-top: 30px;
         }
 
-       .social-links a {
-    width: 50px;
-    height: 50px;
+      .social-links a {
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     border: 2px solid var(--primary);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
-    transition: var(--transition);
-    background-color: transparent;
+    color: var(--primary);
+    font-size: 20px;
+    transition: 0.3s ease;
+    background: transparent;
+    flex-shrink: 0;
 }
 
 
-        .social-links a:hover {
+
+       .social-links a:hover {
     background: var(--primary);
     color: var(--dark);
-    box-shadow: 0 0 15px var(--primary);
+    box-shadow: 0 0 12px var(--primary);
     transform: scale(1.1);
 }
+
 
 
         .contact-form {
