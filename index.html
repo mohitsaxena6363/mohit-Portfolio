@@ -477,36 +477,54 @@
             margin-bottom: 30px;
         }
 
-        .social-links {
-            display: flex;
-            gap: 20px;
-            margin-top: 30px;
-        }
+/* ग्रिड लेआउट फॉर सोशल बटन्स */
+.social-links.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    gap: 10px;
+    max-width: 300px;
+    margin: 30px auto;
+}
 
-        .social-links a {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            border: 1px solid var(--primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition);
-        }
+@media (max-width: 480px) {
+    .social-links.grid-view {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
 
-        .social-links a:hover {
-            background: var(--primary);
-            color: var(--dark);
-            transform: translateY(-5px);
-        }
+.social-links a:hover {
+    background: var(--primary);
+    color: var(--dark);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 245, 255, 0.3);
+}
 
-        .contact-form {
-            flex: 1;
-        }
 
-        .form-group {
-            margin-bottom: 20px;
-        }
+/* मोबाइल पर फिक्स्ड सोशल बार */
+@media (max-width: 768px) {
+    .mobile-social-bar {
+        position: fixed;
+        bottom: 60px;
+        left: 0;
+        right: 0;
+        background: var(--dark);
+        padding: 10px 0;
+        z-index: 999;
+        display: flex;
+        justify-content: center;
+        box-shadow: 0 -5px 20px rgba(0,0,0,0.3);
+    }
+    
+    .mobile-social-bar .social-links {
+        margin: 0;
+    }
+    
+    .mobile-social-bar .social-links a {
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
+    }
+}
 
         .form-group label {
             display: block;
@@ -679,6 +697,12 @@
     <section id="hero">
         <div class="container">
             <div class="hero-content fade-in">
+               
+<div class="mobile-social-bar">
+    <div class="social-links">
+        
+    </div>
+</div>
                 <h1>Hi, I'm <span>Mohit saxena</span></h1>
                 <h1>Web Designer</h1>
                 <span id="element"></span>
@@ -903,14 +927,25 @@
                         <p><i class="fas fa-phone"></i> 8873365815</p>
                         <p><i class="fas fa-map-marker-alt"></i> [Your City], [Your Country]</p>
                     </div>
-                    <div class="social-links">
-                        <a href="https://github.com/yourusername"><i class="fab fa-github"></i></a>
-                        <a  href="https://www.facebook.com/profile.php?id=100054977332777&mibextid=ZbWKwL"><i class="fab fa-facebook"></i></a>
-                        <a href="https://linkedin.com/in/yourprofile"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://twitter.com/yourhandle"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/mohitsaxena5930l?igsh=d2kzbm5qdGQ1a3k5"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-dribbble"></i></a>
-                    </div>
+                    <div class="social-links-container">
+    <div class="social-links">
+        <a href="https://github.com/yourusername" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/yourprofile" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://twitter.com/yourhandle" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/yourprofile" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://facebook.com/yourprofile" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+    </div>
+</div>
                 </div>
                 <div class="contact-form">
                     <form>
