@@ -482,28 +482,33 @@
             margin-bottom: 30px;
         }
 
-        .social-links {
-            display: flex;
-            gap: 20px;
-            margin-top: 30px;
-        }
+       .social-icons {
+  display: flex;
+  justify-content: center; 
+  flex-wrap: wrap;        
+  gap: 20px;              
+  margin-top: 20px;
+}
 
-        .social-links a {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            border: 1px solid var(--primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition);
-        }
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;            
+  height: 50px;           
+  border: 2px solid #00f0ff; 
+  border-radius: 50%;        
+  color: #00f0ff;
+  font-size: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
 
-        .social-links a:hover {
-            background: var(--primary);
-            color: var(--dark);
-            transform: translateY(-5px);
-        }
+.social-icons a:hover {
+  background-color: #00f0ff;
+  color: #000;
+  transform: scale(1.1); 
+}
 
         .contact-form {
             flex: 1;
@@ -921,7 +926,7 @@
                         <p><i class="fas fa-map-marker-alt"></i> Canada , India </p>
                     </div>
                     <h4> ""Mohit saxena ❤️ </h4>
-                   <div class="social-icons">
+                   <<div class="social-icons">
   <a href="#"><i class="fab fa-github"></i></a>
   <a href="#"><i class="fab fa-facebook"></i></a>
   <a href="#"><i class="fab fa-linkedin"></i></a>
@@ -929,6 +934,7 @@
   <a href="#"><i class="fab fa-instagram"></i></a>
   <a href="#"><i class="fab fa-dribbble"></i></a>
 </div>
+
 
                 </div>
                 <div class="contact-form">
